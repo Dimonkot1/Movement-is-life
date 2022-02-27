@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float vertical;
-    public float horizontal;
+    private float _vertical;
+    private float _horizontal;
 
+    public float Vertical { get => _vertical; }
+    public float Horizontal { get => _horizontal; }
 
     void Update()
     {
-        vertical = Input.GetAxisRaw("Vertical") ;
-        horizontal = Input.GetAxisRaw("Horizontal");
+        _vertical = Input.GetAxisRaw("Vertical") ;
+        _horizontal = Input.GetAxisRaw("Horizontal");
     } 
 
 }
